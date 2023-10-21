@@ -5,13 +5,13 @@
       <p class="text-small">Log in to access your account</p>
       <input v-model="username" type="text" class="input" placeholder="Username" />
       <input v-model="password" type="password" class="input" placeholder="Password" />
-      <button @click="create" class="button">Create account</button>
+      <button @click="createAccount" class="button">Create account</button>
     </div>
   </div>
 </template>
 
 <script>
-import { create } from 'axios'
+import axios from 'axios'
 
 export default {
   data () {
@@ -21,10 +21,20 @@ export default {
     }
   },
   methods: {
-    create,
-    login () {
-      // Poți adăuga logica de autentificare aici mai târziu
-      // Momentan este doar design
+    createAccount () {
+      // Make a POST request to your backend API to create an account
+      axios.post('/api/create-account', {
+        username: this.username,
+        password: this.password
+      })
+        .then(response => {
+          // Handle successful account creation, e.g., redirect to login
+          this.$router.push('/login')
+        })
+        .catch(error => {
+          // Handle errors, e.g., show an error message to the user
+          console.error('Account creation failed:', error)
+        })
     }
   }
 }
@@ -51,7 +61,7 @@ export default {
 .text {
   color: #f9fafe;
   font-size: 32px;
-  font-family: "serif";
+  font-family: 'serif';
   font-weight: 700;
   line-height: 38px;
   text-align: center;
@@ -61,7 +71,7 @@ export default {
 .text-small {
   color: #f9fafe;
   font-size: 16px;
-  font-family: "serif";
+  font-family: 'serif';
   line-height: 18px;
   text-align: center;
 }
@@ -76,7 +86,7 @@ export default {
   background-color: #ffffff;
   color: #707071;
   font-size: 16px;
-  font-family: "serif";
+  font-family: 'serif';
   line-height: 20px;
   outline: none;
   margin-top: 20px;
@@ -92,7 +102,7 @@ export default {
   background-color: #030303;
   color: #ffffff;
   font-size: 16px;
-  font-family: "serif";
+  font-family: 'serif';
   font-weight: 500;
   line-height: 20px;
   outline: none;
