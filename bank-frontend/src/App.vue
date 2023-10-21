@@ -1,18 +1,15 @@
 <template>
   <div id="app">
-    <AuthForm /> <!-- Utilizează componenta AuthForm -->
-    <Dashboard /> <!-- Utilizează componenta Dashboard -->
+    <LeftBar /> <!-- Utilizează componenta AuthForm -->
   </div>
 </template>
 
 <script>
-import AuthForm from '@/pages/AuthForm.vue' // Importă AuthForm.vue
-import Dashboard from '@/pages/DashboardAccount.vue' // Importă DashboardAccount.vue
+import LeftBar from '@/components/LeftBar.vue' // Importă AuthForm.vue
 export default {
   name: 'App',
   components: {
-    AuthForm,
-    Dashboard
+    LeftBar
   }
 }
 </script>

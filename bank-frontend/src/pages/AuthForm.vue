@@ -36,7 +36,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  min-height: 90vh;
 }
 
 .card {
