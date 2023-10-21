@@ -6,15 +6,13 @@
 </template>
 
 <script>
-import AuthForm from '@/views/AuthForm.vue' // Importă AuthForm.vue
-import Dashboard from '@/components/DashboardAccount.vue' // Importă DashboardAccount.vue
-import CreateAccount from "@/views/CreateAccount.vue"
+import AuthForm from '@/pages/AuthForm.vue' // Importă AuthForm.vue
+import Dashboard from '@/pages/DashboardAccount.vue' // Importă DashboardAccount.vue
 export default {
   name: 'App',
   components: {
     AuthForm,
-    Dashboard,
-    CreateAccount
+    Dashboard
   }
 }
 </script>

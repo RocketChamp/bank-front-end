@@ -1,7 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import DashboardAccount from '@/components/DashboardAccount.vue' // Asigură-te că import-ul este corect
-import { isUserAuthenticated } from '@/views/AuthForm.vue'
-import CreateAccount from '@/views/CreateAccount.vue'
+import DashboardAccount from '@/pages/DashboardAccount.vue' // Asigură-te că import-ul este corect
+import { isUserAuthenticated } from '@/pages/AuthForm.vue'
+import CreateAccount from '@/pages/CreateAccount.vue'
 
 const routes = [
   {
