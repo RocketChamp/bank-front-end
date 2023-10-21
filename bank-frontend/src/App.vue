@@ -1,15 +1,15 @@
 <template>
   <div id="app">
-    <LeftBar /> <!-- Utilizează componenta AuthForm -->
+    <AccountDashboard /> <!-- Utilizează componenta AuthForm -->
   </div>
 </template>
 
 <script>
-import LeftBar from '@/components/LeftBar.vue' // Importă AuthForm.vue
+import AccountDashboard from '@/pages/AccountDashboard.vue' // Importă AuthForm.vue
 export default {
   name: 'App',
   components: {
-    LeftBar
+    AccountDashboard
   }
 }
 </script>
@@ -21,6 +21,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 0;
 }
 </style>

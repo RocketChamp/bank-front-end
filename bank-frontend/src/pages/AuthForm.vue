@@ -7,23 +7,46 @@
       <input v-model="password" type="password" class="input" placeholder="Password" />
       <button @click="login" class="button">Login</button>
       <p class="create-account-text">
-        Don,t have an account? <router-link to="/create-account">Create account</router-link>
+        Don't have an account? <router-link to="/create-account">Create account</router-link>
       </p>
     </div>
   </div>
 </template>
 
 <script>
-import { useRouter } from 'vue-router' // Importă Vue Router
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 
 export default {
-  methods: {
-    // ... alte metode
-    redirectToCreateAccount () {
-      const router = useRouter() // Obține instanța router-ului
+  setup () {
+    const username = ref('')
+    const password = ref('')
 
-      // Utilizează router-ul pentru a redirecționa către ruta "create-account"
-      router.push('/create-account')
+    const router = useRouter()
+
+    const login = () => {
+      // Login logic goes here
+      // For now, you can redirect to the dashboard as an example
+      router.push('/dashboardAccount')
+    }
+
+    const navigateTo = (destination) => {
+      if (destination === 'logout') {
+        logout() // Handle the logout logic if needed
+        router.push('/auth-form') // Redirect to the 'AuthForm' route
+      }
+    }
+
+    const logout = () => {
+      // Implement your logout logic here
+    }
+
+    return {
+      username,
+      password,
+      login,
+      navigateTo, // Include navigateTo in the return object
+      logout // Include logout in the return object
     }
   }
 }
@@ -51,7 +74,7 @@ export default {
 .text {
   color: #f9fafe;
   font-size: 32px;
-  font-family: "serif";
+  font-family: 'serif';
   font-weight: 700;
   line-height: 38px;
   text-align: center;
@@ -61,7 +84,7 @@ export default {
 .text-small {
   color: #f9fafe;
   font-size: 16px;
-  font-family: "serif";
+  font-family: 'serif';
   line-height: 18px;
   text-align: center;
 }
@@ -76,7 +99,7 @@ export default {
   background-color: #ffffff;
   color: #707071;
   font-size: 16px;
-  font-family: "serif";
+  font-family: 'serif';
   line-height: 20px;
   outline: none;
   margin-top: 20px;
@@ -85,17 +108,26 @@ export default {
 .button {
   width: 352px;
   height: 56px;
-  padding: 0px 8px;
+  padding: 0 8px;
   border: 0;
   box-sizing: border-box;
   border-radius: 4px;
   background-color: #030303;
   color: #ffffff;
   font-size: 16px;
-  font-family: "serif";
+  font-family: 'serif';
   font-weight: 500;
   line-height: 20px;
   outline: none;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.create-account-text {
+  color: #00a7ad;
+  font-size: 16px;
+  font-family: 'serif';
+  text-align: center;
   margin-top: 20px;
   cursor: pointer;
 }
