@@ -14,7 +14,7 @@ const routes = [
       {
         path: 'register',
         name: 'Register',
-        component: () => import('@/views/Register.vue'),
+        component: () => import('@/views/RegisterView.vue'),
       },
     ],
   },
@@ -25,12 +25,12 @@ const routes = [
       {
         path: '', 
         name: 'Dashboard', 
-        component: () => import('@/views/Dashboard.vue')
+        component: () => import('@/views/DashboardView.vue')
       },
       {
         path: 'dashboard', 
         name: 'Dashboard', 
-        component: () => import('@/views/Dashboard.vue')
+        component: () => import('@/views/DashboardView.vue')
       },
       {
         path: 'transfer', 

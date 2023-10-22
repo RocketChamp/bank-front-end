@@ -19,7 +19,7 @@
             <v-menu>
                 <template #activator="{ props }">
                     <v-btn variant="plain" :ripple="false" append-icon="mdi-chevron-down" v-bind="props">
-                        <p>Eusebiu Jacot</p>
+                        <p class="text-body-1">Eusebiu Jacot</p>
                     </v-btn>
                 </template>
                 <v-list>
