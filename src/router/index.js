@@ -12,45 +12,50 @@ const routes = [
         component: () => import('@/views/LoginView.vue'),
       },
       {
+        path: 'create',
+        name: 'Create',
+        component: () => import('@/views/RegisterClientView.vue'),
+      },
+      {
         path: 'register',
         name: 'Register',
-        component: () => import('@/views/RegisterView.vue'),
+        component: () => import('@/views/RegisterAccountView.vue'),
       },
     ],
   },
   {
-    path: "/", 
-    component: () => import('@/layouts/default/Default.vue'), 
+    path: "/",
+    component: () => import('@/layouts/default/Default.vue'),
     children: [
       {
-        path: '', 
-        name: 'Dashboard', 
+        path: '',
+        name: 'Dashboard',
         component: () => import('@/views/DashboardView.vue')
       },
       {
-        path: 'dashboard', 
-        name: 'Dashboard', 
+        path: 'dashboard',
+        name: 'Dashboard',
         component: () => import('@/views/DashboardView.vue')
       },
       {
-        path: 'transfer', 
-        name: 'Transfer', 
+        path: 'transfer',
+        name: 'Transfer',
         component: () => import('@/views/Transfer.vue')
       },
       {
-        path: 'transactions', 
-        name: 'Transactions', 
+        path: 'transactions',
+        name: 'Transactions',
         component: () => import('@/views/Transactions.vue')
       },
       {
-        path: 'accounts', 
-        name: 'Accounts', 
+        path: 'accounts',
+        name: 'Accounts',
         component: () => import('@/views/Accounts.vue')
       },
       {
-        path: 'settings', 
-        name: 'Settings', 
-        component: () => import('@/views/Settings.vue')
+        path: 'settings',
+        name: 'Settings',
+        component: () => import('@/views/SettingsView.vue')
       },
     ]
   }

@@ -45,4 +45,6 @@
 
 <script setup>
 import Card from '@/components/common/Card.vue';
+
+
 </script>
