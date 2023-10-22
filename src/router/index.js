@@ -3,35 +3,57 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
   {
-    path: '/',
-    component: () => import('@/layouts/default/Default.vue'),
+    path: '/authenticate',
+    component: () => import('@/layouts/authentication/Default.vue'),
     children: [
-      {
-        path: '',
-        name: 'Home',
-        // route level code-splitting
-        // this generates a separate chunk (about.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
-        component: () => import(/* webpackChunkName: "home" */ '@/views/Home.vue'),
-      },
       {
         path: 'login',
         name: 'Login',
-        // route level code-splitting
-        // this generates a separate chunk (about.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
-        component: () => import(/* webpackChunkName: "home" */ '@/views/LoginView.vue'),
+        component: () => import('@/views/LoginView.vue'),
       },
       {
-        path: '/register',
+        path: 'register',
         name: 'Register',
-        // route level code-splitting
-        // this generates a separate chunk (about.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
-        component: () => import(/* webpackChunkName: "home" */ '@/views/Home.vue'),
+        component: () => import('@/views/Home.vue'),
       },
     ],
   },
+  {
+    path: "/", 
+    component: () => import('@/layouts/default/Default.vue'), 
+    children: [
+      {
+        path: '', 
+        name: 'Dashboard', 
+        component: () => import('@/views/Dashboard.vue')
+      },
+      {
+        path: 'dashboard', 
+        name: 'Dashboard', 
+        component: () => import('@/views/Dashboard.vue')
+      },
+      {
+        path: 'transfer', 
+        name: 'Transfer', 
+        component: () => import('@/views/Transfer.vue')
+      },
+      {
+        path: 'transactions', 
+        name: 'Transactions', 
+        component: () => import('@/views/Transactions.vue')
+      },
+      {
+        path: 'accounts', 
+        name: 'Accounts', 
+        component: () => import('@/views/Accounts.vue')
+      },
+      {
+        path: 'settings', 
+        name: 'Settings', 
+        component: () => import('@/views/Settings.vue')
+      },
+    ]
+  }
 ]
 
 const router = createRouter({
