@@ -1,6 +1,7 @@
 <template>
-    <p>Hello from Dashboard</p>
+    <Card />
 </template>
 
 <script setup>
+import Card from '@/components/Card.vue';
 </script>
