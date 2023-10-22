@@ -1,6 +1,7 @@
 <template>
-    <p>Hello from Dashboard</p>
+    <account-info/>
 </template>
 
 <script setup>
+import AccountInfo from "@/components/AccountInfo.vue";
 </script>

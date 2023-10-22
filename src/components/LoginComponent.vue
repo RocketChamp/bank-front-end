@@ -27,13 +27,14 @@ export default {
         username: this.username,
         password: this.password,
       };
-      axios.post('http://localhost:8080/user/login', userData)
+      axios.post('http://localhost:8080/account/login', userData)
         .then(response => {
           if (response.status === 200) {
-            console.log('Login successful!');
+            // Salvăm username în localStorage
+            localStorage.setItem('username', userData.username);
             this.$router.push('/dashboard');
           } else {
-            console.error('Authentication failed');
+            // Tratați aici cazurile în care autentificarea a eșuat
           }
         })
         .catch(error => {
