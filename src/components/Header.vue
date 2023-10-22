@@ -1,5 +1,5 @@
 <template>
-    <v-toolbar color="transparent" height="100">
+    <v-toolbar color="transparent" height="150">
         <v-app-bar-nav-icon variant="text" @click.stop="$emit('burger-clicked')"></v-app-bar-nav-icon>
         <v-toolbar-title class="font-weight-bold text-h5">{{ routeName }}</v-toolbar-title>
         <div class="d-flex align-center">

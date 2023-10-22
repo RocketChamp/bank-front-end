@@ -1,5 +1,7 @@
 <template>
-    Hello from transfer
+    <TransferComponent />
 </template>
 
-<script ></script>
+<script setup >
+    import TransferComponent from "@/components/Transfer/TransferComponent.vue"
+</script>

@@ -2,7 +2,7 @@
   <v-main>
     <NavigationDrawer :show="showNavigation" @change-drawer-state="toggleNavigation" />
     <v-row>
-      <v-col class="pa-10">
+      <v-col class="px-8">
         <HeaderComponent @burger-clicked="toggleNavigation" />
         <router-view />
       </v-col>

@@ -1,6 +1,6 @@
 <template>
     <v-row>
-        <v-col cols="8">
+        <v-col cols="7">
             <v-row>
                 <v-col cols="7">
                     <TotalBalance />
@@ -10,7 +10,7 @@
                 </v-col>
             </v-row>
         </v-col>
-        <v-col cols="4">
+        <v-col cols="5">
             <TransactionsComponent />
         </v-col>
     </v-row>

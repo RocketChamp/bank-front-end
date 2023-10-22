@@ -19,23 +19,24 @@
                 </v-col>
             </v-row>
             <v-row>
-                <v-col class="d-flex flex-column align-center">
-
-                    <div class="d-flex">
-                        <v-icon color="#55AFA9" icon="mdi-menu-up" />
-                        <div class="ml-1 ">Income</div>
+                <v-col class="d-flex flex-column align-start">
+                    <div>
+                        <div class="d-flex">
+                            <v-icon color="#55AFA9" icon="mdi-menu-up" />
+                            <div class="ml-1">Income</div>
+                        </div>
+                        <div class="font-weight-bold text-h6">USD 30,000.00</div>
                     </div>
-
-                    <div class="font-weight-bold">USD 30,000.00</div>
-
                 </v-col>
                 <v-divider vertical></v-divider>
                 <v-col class="d-flex flex-column align-center">
-                    <div class="d-flex">
-                        <v-icon color="#C53856" icon="mdi-menu-down" />
-                        <div class="ml-1 ">Expenses</div>
+                    <div>
+                        <div class="d-flex">
+                            <v-icon color="#C53856" icon="mdi-menu-down" />
+                            <div class="ml-1">Expenses</div>
+                        </div>
+                        <div class="font-weight-bold text-h6">USD 20,000.00</div>
                     </div>
-                    <div class="font-weight-bold">USD 20,000.00</div>
                 </v-col>
             </v-row>
         </v-card-text>

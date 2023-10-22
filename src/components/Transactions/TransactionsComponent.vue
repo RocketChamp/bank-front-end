@@ -1,18 +1,18 @@
 <template>
     <v-card variant="flat">
-        <v-card-title>
-            <div class="d-flex">
-                <p>Transactions</p>
+        <v-card-title class="py-0">
+            <div class="d-flex align-center">
+                <p class="font-weight-bold">Transactions</p>
                 <v-spacer></v-spacer>
-                <v-btn variant="plain" class="text-subtitle-1">View all</v-btn>
+                <v-btn variant="plain" size="small" class="text-subtitle-1">View all</v-btn>
             </div>
         </v-card-title>
-        <v-btn-toggle density="compact" variant="plain" v-model="toggle_exclusive">
-            <v-btn variant="plain">All</v-btn>
-            <v-btn variant="plain">Expenses</v-btn>
-            <v-btn variant="plain">Income</v-btn>
-        </v-btn-toggle>
-        <v-card-text>
+        <v-card-text class="pa-0">
+            <v-btn-toggle class="ml-2" density="compact" variant="plain">
+                <v-btn variant="plain" size="small">All</v-btn>
+                <v-btn variant="plain" size="small">Expenses</v-btn>
+                <v-btn variant="plain" size="small">Income</v-btn>
+            </v-btn-toggle>
             <v-list v-for="(transaction, index) in transactions" :key="index">
                 <v-list-item>
                     <template #prepend>
@@ -29,8 +29,10 @@
                     </v-list-item-subtitle>
 
                     <template #append>
-                        <p v-if="transaction.type == 'expense'" class="font-weight-bold">-{{ transaction.currency + transaction.amount }}</p>
-                        <p v-else-if="transaction.type == 'income'" class="text-green font-weight-bold">+{{ transaction.currency + transaction.amount }}</p>
+                        <p v-if="transaction.type == 'expense'" class="font-weight-bold">-{{ transaction.currency +
+                            transaction.amount }}</p>
+                        <p v-else-if="transaction.type == 'income'" class="text-green font-weight-bold">+{{
+                            transaction.currency + transaction.amount }}</p>
                     </template>
                 </v-list-item>
             </v-list>
