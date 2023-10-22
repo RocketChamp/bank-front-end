@@ -1,4 +1,4 @@
-# base
+ls -a# base
 
 ## Project setup
 
