@@ -13,7 +13,7 @@
         <template #append>
             <v-list>
                 <v-list-item :ripple="false" link prepend-icon="mdi-cog" title="Settings" to="/settings"></v-list-item>
-                <v-list-item :ripple="false" link prepend-icon="mdi-logout" title="Log out" to="/authenticate/login"></v-list-item>
+                <v-list-item class="mb-12" :ripple="false" link prepend-icon="mdi-logout" title="Log out" to="/authenticate/login"></v-list-item>
             </v-list>
         </template>
     </v-navigation-drawer>

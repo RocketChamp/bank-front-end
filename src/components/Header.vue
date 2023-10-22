@@ -1,5 +1,5 @@
 <template>
-    <v-toolbar color="transparent" >
+    <v-toolbar color="transparent" height="100">
         <v-toolbar-title class="font-weight-bold text-h5">{{ routeName }}</v-toolbar-title>
         <div class="d-flex align-center">
             <v-menu>

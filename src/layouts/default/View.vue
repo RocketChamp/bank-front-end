@@ -1,12 +1,12 @@
 <template>
   <v-main>
     <NavigationDrawer />
-      <v-row>
-        <v-col>
-          <Header />
-          <router-view />
-        </v-col>
-      </v-row>
+    <v-row>
+      <v-col class="pa-10">
+        <Header />
+        <router-view />
+      </v-col>
+    </v-row>
   </v-main>
 </template>
 
