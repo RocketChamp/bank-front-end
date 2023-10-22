@@ -15,7 +15,7 @@
     </ul>
     <div class="bottom-menu">
       <p @click="navigateTo('settings')">Settings</p>
-      <p @click="navigateTo('logout')">Log Out</p>
+      <router-link to = "/login">Logout</router-link>
     </div>
   </div>
 </template>
