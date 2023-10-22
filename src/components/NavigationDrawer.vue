@@ -21,7 +21,7 @@
 
 <script setup></script>
 
-<style>
+<style scoped>
 .v-list-item--active .v-list-item-title {
     font-weight: bold !important;
 }

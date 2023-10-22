@@ -18,7 +18,7 @@
             </v-avatar>
             <v-menu>
                 <template #activator="{ props }">
-                    <v-btn append-icon="mdi-chevron-down" v-bind="props">
+                    <v-btn variant="plain" :ripple="false" append-icon="mdi-chevron-down" v-bind="props">
                         <p>Eusebiu Jacot</p>
                     </v-btn>
                 </template>
