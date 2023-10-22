@@ -1,11 +1,11 @@
 <template>
     <v-toolbar color="transparent" height="100">
+        <v-app-bar-nav-icon variant="text" @click.stop="$emit('burger-clicked')"></v-app-bar-nav-icon>
         <v-toolbar-title class="font-weight-bold text-h5">{{ routeName }}</v-toolbar-title>
         <div class="d-flex align-center">
             <v-menu>
                 <template #activator="{ props }">
                     <v-btn icon="mdi-bell" v-bind="props" />
-
                 </template>
                 <v-list>
                     <v-list-item v-for="(item, index) in [1, 2, 3, 4]" :key="index" :value="index">

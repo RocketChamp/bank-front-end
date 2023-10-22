@@ -1,17 +1,31 @@
 <template>
   <v-main>
-    <NavigationDrawer />
+    <NavigationDrawer :show="showNavigation" @change-drawer-state="toggleNavigation" />
     <v-row>
       <v-col class="pa-10">
-        <Header />
+        <HeaderComponent @burger-clicked="toggleNavigation" />
         <router-view />
       </v-col>
     </v-row>
   </v-main>
 </template>
 
-<script setup>
+<script>
 import NavigationDrawer from '@/components/NavigationDrawer.vue';
-import Header from '@/components/Header.vue'
+import HeaderComponent from '@/components/Header.vue'
+
+export default {
+  components: {NavigationDrawer, HeaderComponent}, 
+  data() {
+    return {
+      showNavigation: false
+    }
+  }, 
+  methods: {
+    toggleNavigation() {
+      this.showNavigation = !this.showNavigation;
+    }
+  }
+}
 //
 </script>
